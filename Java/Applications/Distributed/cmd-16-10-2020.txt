@@ -1,0 +1,92 @@
+    2  cd Java/Applications/Distributed/
+    3  ls *.java
+    4  java ServerSocketTest &
+    5  vi SocketTest.java
+    6  javac SocketTest.java
+    7  vi SocketTest.java
+    8  javac SocketTest.java
+    9  java SocketTest keyboard 3
+   10  java SocketTest mouse 300
+   11  java SocketTest printer 2
+   12  java SocketTest
+   13  vi SocketTest.java
+   14  javac SocketTest.java
+   15  java SocketTest
+   16  ps
+   17  kill 18496
+   18  java SocketTest keyboard 3
+   19  cp SocketTest.class ~/Shared/
+   20  java SocketTest cpu 5 ioe-cdac-226
+   21  vi ServerSocketTest.java 
+   22  vi DatagramSocketTest.java
+   23  javap java.util.Random
+   24  vi ServerSocketTest.java 
+   25  vi DatagramSocketTest.java 
+   26  javac DatagramSocketTest.java 
+   27  sudo firewall-cmd status
+   28  sudo firewall-cmd 
+   29  man firewall-cmd
+   30  sudo firewall-cmd --state
+   31  java DatagramSocketTest &
+   32  vi MulticastSocketTest.java
+   33  vi DatagramSocketTest.java 
+   34  vi MulticastSocketTest.java
+   35  javac MulticastSocketTest.java
+   36  java MulticastSocketTest
+   37  cp DatagramSocketTest.class ~/Shared/
+   38  cp MulticastSocketTest.class ~/Shared/
+   39  java MulticastSocketTest
+   40  cp -r /SoftDev/Java/ ~/Shared/
+   41  ls
+   42  mkdir RMITest
+   43  cd RMITest/
+   44  mkdir src
+   45  vi src/ItemInfo.java
+   46  javac -d . src/ItemInfo.java
+   47  vi src/ShopKeeper.java
+   48  javac -d . src/ShopKeeper.java
+   49  vi src/ShopKeeperService.java
+   50  vi ../ServerSocketTest.java 
+   51  vi src/ShopKeeperService.java
+   52  javac -d . src/ShopKeeperService.java
+   53  rmiregistry &
+   54  vi Server.java
+   55  javac Server.java
+   56  java Server &
+   57  vi Client.java
+   58  javap java.rmi.Naming
+   59  vi Client.java
+   60  javac Client.java
+   61  java Client keyboard 5
+   62  java Client printer 2
+   63  java Client mouse 200
+   64  vi src/ItemInfo.java 
+   65  ps
+   66  kill 23680
+   67  kill 23550
+   68  vi src/ShopKeeperService.java
+   69  cd ..
+   70  mkdir RMIStateTest
+   71  cd RMIStateTest/
+   72  mkdir src
+   73  vi src/Cart.java
+   74  javac -d . src/Cart.java
+   75  vi src/CartService.java
+   76  vi ../RMITest/src/ShopKeeperService.java 
+   77  vi src/CartService.java
+   78  javac -d . src/CartService.java
+   79  vi src/CartFactory.java
+   80  vi src/CartFactoryService.java
+   81  vi src/CartService.java
+   82  javac -d . src/CartFactoryService.java 
+   83  javac -d . src/CartFactory.java 
+   84  javac -d . src/CartFactoryService.java 
+   85  vi src/CartFactoryService.java
+   86  cp ../RMITest/Server.java .
+   87  vi Server.java 
+   88  javac  Server.java 
+   89  rmiregistry &
+   90  java Server &
+   91  vi Client.java
+   92  javac Client.java
+   93  java Client
