@@ -1,0 +1,73 @@
+    2  cd Java/Applications/
+    3  ls
+    4  mkdir Database
+    5  cd Database/
+    6  vi DAL.java
+    7  javac DAL.java
+    8  echo CLASSPATH
+    9  echo $CLASSPATH
+   10  mkdir ~/jars
+   11  cp ~/Shared/java_refs/install/*.jar ~/jars/
+   12  ll ~/jars/
+   13  echo $CLASSPATH
+   14  vi QueryTest.java
+   15  javac QueryTest.java
+   16  java QueryTest
+   17  ~/orclxe start
+   18  vi DAL.java 
+   19  javac DAL.java 
+   20  java QueryTest
+   21  cp QueryTest.java UpdateTest.java
+   22  vi UpdateTest.java
+   23  javac UpdateTest.java
+   24  java QueryTest
+   25  java UpdateTest 103
+   26  java QueryTest
+   27  java QueryTest 107
+   28  java UpdateTest 107
+   29  vi UpdateTest.java
+   30  cp /SoftDev/Java/ ~/Shared/
+   31  cp -r /SoftDev/Java/ ~/Shared/
+   32  cp UpdateTest.java ParamSQLTest.java
+   33  vi ParamSQLTest.java
+   34  javac ParamSQLTest.java
+   35  vi ParamSQLTest.java
+   36  javac ParamSQLTest.java
+   37  java ParamSQLTest CU103 104 5
+   38  java ParamSQLTest CU102 106 3
+   39  java ParamSQLTest CU102 101 3
+   40  vi ParamSQLTest.java
+   41  cp ParamSQLTest.java StoredProcTest.java
+   42  vi StoredProcTest.java 
+   43  javac StoredProcTest.java 
+   44  java StoredProcTest CU101 103 6
+   45  java StoredProcTest CU105 102 4
+   46  java StoredProcTest CU104 102 4
+   47  mkdir DataSourceTest
+   48  cd DataSourceTest/
+   49  mkdir src
+   50  vi src/Sales.java
+   51  rm src/OrderManager.java
+   52  vi src/OrderManager.java
+   53  javac -d . src/OrderManager.java 
+   54  vi src/OrderManagerService.java
+   55  vi ../ParamSQLTest.java 
+   56  vi src/OrderManagerService.java
+   57  javac -d . src/OrderManagerService.java
+   58  vi src/OrderManagerService.java
+   59  javac -d . src/OrderManagerService.java
+   60  vi MiddleTier.java
+   61  javac MiddleTier.java
+   62  java MiddleTier &
+   63  rmiregistry 2099
+   64  cp ../StoredProcTest.java PresentationTier.java
+   65  vi PresentationTier.java 
+   66  javac PresentationTier.java 
+   67  vi PresentationTier.java 
+   68  javac PresentationTier.java 
+   69  java PresentationTier CU101 102 8
+   70  java PresentationTier CU102 108 4
+   71  java PresentationTier CU102 105 4
+   72  pkill -f 'java MiddleTier'
+   73  java PresentationTier CU102 105 4
+   74  history > cmd-17-10-2020.txt
