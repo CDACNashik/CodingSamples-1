@@ -1,0 +1,90 @@
+  992  cd Java/Applications/
+  993  ls
+  994  mkdir Web
+  995  cd Web/
+  996  cp ../Distributed/ServerSocketTest.java HTTPTest.java
+  997  vi HTTPTest.java 
+  998  javac HTTPTest.java 
+  999  vi HTTPTest.java 
+ 1000  exec bash
+ 1001  javac HTTPTest.java 
+ 1002  cd Java/Applications/Web/
+ 1003  javac HTTPTest.java 
+ 1004  java HTTPTest &
+ 1005  cp ../Distributed/SocketTest.java URLTest.java
+ 1006  vi URLTest.java 
+ 1007  javac URLTest.java 
+ 1008  vi URLTest.java 
+ 1009  javac URLTest.java 
+ 1010  java URLTest hdd 3
+ 1011  java URLTest printer 2
+ 1012  vi URLTest.java 
+ 1013  javac URLTest.java 
+ 1014  java URLTest printer 2
+ 1015  . ~/glassfish5/setenv.sh 
+ 1016  java -version
+ 1017  asadmin start-domain
+ 1018  asadmin stop-domain
+ 1019  asadmin start-domain
+ 1020  mkdir ServletTest
+ 1021  cd ServletTest/
+ 1022  mkdir ServletWebApp
+ 1023  mkdir ServletWebApp/WEB-INF
+ 1024  mkdir ServletWebApp/WEB-INF/classes
+ 1025  cp ~/Shared/Support/web/web.xml ServletWebApp/WEB-INF/
+ 1026  vi ServletWebApp/welcome.html
+ 1027  asadmin deploy ServletWebApp
+ 1028  vi ServletWebApp/WEB-INF/web.xml 
+ 1029  asadmin undeploy ServletWebApp
+ 1030  asadmin deploy ServletWebApp
+ 1031  mkdir src
+ 1032  vi src/GreetingServlet.java
+ 1033  javac -d ServletWebApp/WEB-INF/classes/ src/GreetingServlet.java 
+ 1034  vi ServletWebApp/WEB-INF/web.xml 
+ 1035  touch ServletWebApp/.reload
+ 1036  cp -r /SoftDev/Java/ ~/Shared/
+ 1037  cp src/GreetingServlet.java src/StateServlet.java
+ 1038  vi src/StateServlet.java
+ 1039  javac -d ServletWebApp/WEB-INF/classes/ src/StateServlet.java 
+ 1040  cp ServletWebApp/welcome.html ServletWebApp/formpost.html
+ 1041  vi ServletWebApp/formpost.html
+ 1042  touch ServletWebApp/.reload
+ 1043  vi src/GreetingServlet.java 
+ 1044  vi ServletWebApp/welcome.html 
+ 1045  cp ServletWebApp/welcome.html ServletWebApp/welcome.htmx
+ 1046  vi ServletWebApp/welcome.htmx
+ 1047  cp src/StateServlet.java src/HtmxServlet.java
+ 1048  vi src/HtmxServlet.java
+ 1049  javac -d ServletWebApp/WEB-INF/classes/ src/HtmxServlet.java 
+ 1050  touch ServletWebApp/.reload
+ 1051  vi ServletWebApp/welcome.htmx
+ 1052  cd ../..
+ 1053  mkdir JSPTest
+ 1054  cd JSPTest/
+ 1055  mkdir JSPWebApp
+ 1056  mkdir JSPWebApp/WEB-INF
+ 1057  mkdir JSPWebApp/WEB-INF/classes
+ 1058  cp ~/Shared/Support/web/web.xml JSPWebApp/WEB-INF/
+ 1059  cd ,,
+ 1060  cd ..
+ 1061  ll
+ 1062  mv JSPTest/ Web/
+ 1063  cd Web/JSPTest/
+ 1064  cp ../ServletTest/ServletWebApp/welcome.htm JSPWebApp/
+ 1065  cp ../ServletTest/ServletWebApp/welcome.html JSPWebApp/
+ 1066  vi JSPWebApp/welcome.html 
+ 1067  mv JSPWebApp/welcome.html JSPWebApp/welcome.jsp
+ 1068  vi JSPWebApp/welcome.jsp 
+ 1069  asadmin deploy JSPWebApp
+ 1070  vi JSPWebApp/welcome.jsp 
+ 1071  mkdir src
+ 1072  vi src/CounterBean.java
+ 1073  javac -d JSPWebApp/WEB-INF/classes/ src/CounterBean.java
+ 1074  touch JSPWebApp/.reload
+ 1075  cp JSPWebApp/welcome.jsp JSPWebApp/beantest1.jsp
+ 1076  vi JSPWebApp/beantest1.jsp
+ 1077  vi src/GreeterBean.java
+ 1078  javac -d JSPWebApp/WEB-INF/classes/ src/GreeterBean.java 
+ 1079  touch JSPWebApp/.reload
+ 1080  cp JSPWebApp/welcome.jsp JSPWebApp/beantest2.jspx
+ 1081  vi JSPWebApp/beantest2.jspx
