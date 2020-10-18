@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>ServletWebApp</title>
+	</head>
+	<body>
+		<h1>Welcome Visitor</h1>
+		<b>Time on server: </b><x:now/>
+	</body>
+</html>
+
