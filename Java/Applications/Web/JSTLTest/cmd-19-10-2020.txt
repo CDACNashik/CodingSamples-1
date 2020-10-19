@@ -1,1 +1,80 @@
-
+    2  cd Java/Applications/Web/
+    3  ls
+    4  . ~/glassfish5/setenv.sh 
+    5  asadmin start-domain
+    6  ls
+    7  cd JSPTest/
+    8  ll
+    9  vi src/ClockTag.java
+   10  javac -d JSPWebApp/WEB-INF/classes/ src/ClockTag.java
+   11  vi src/ClockTag.java
+   12  javac -d JSPWebApp/WEB-INF/classes/ src/ClockTag.java
+   13  vi src/ClockTag.java
+   14  javac -d JSPWebApp/WEB-INF/classes/ src/ClockTag.java
+   15  touch JSPWebApp/.reload 
+   16  cp ~/Shared/Support/web/taglib.tld JSPWebApp/WEB-INF/
+   17  vi JSPWebApp/WEB-INF/taglib.tld 
+   18  touch JSPWebApp/.reload 
+   19  cp JSPWebApp/welcome.jsp JSPWebApp/tagtest1.jsp
+   20  vi JSPWebApp/tagtest1.jsp
+   21  cp src/ClockTag.java src/LottoTag.java
+   22  vi src/LottoTag.java
+   23  javac -d JSPWebApp/WEB-INF/classes/ src/LottoTag.java 
+   24  vi JSPWebApp/WEB-INF/taglib.tld 
+   25  touch JSPWebApp/.reload 
+   26  cp JSPWebApp/beantest2.jspx JSPWebApp/tagtest2.jspx
+   27  vi JSPWebApp/tagtest2.jspx
+   28  cp -r /SoftDev/Java/ ~/Shared/
+   29  cd ..
+   30  ~/orclxe start
+   31  mkdir JSTLTest
+   32  cd JSTLTest/
+   33  mkdir -p JSTLWebApp/WEB-INF/classes
+   34  cp ~/Shared/Support/web/web.xml JSTLWebApp/WEB-INF/
+   35  asadmin deploy JSTLWebApp
+   36  mkdir src
+   37  vi src/ProductBean.java
+   38  javac -d JSTLWebApp/WEB-INF/classes/ src/ProductBean.java 
+   39  touch JSTLWebApp/.reload
+   40  vi JSTLWebApp/products.jspx
+   41  cp JSTLWebApp/products.jspx JSTLWebApp/customer.jspx
+   42  vi JSTLWebApp/customer.jspx
+   43  vi src/CustomerBean.java
+   44  javac -d JSTLWebApp/WEB-INF/classes/ src/CustomerBean.java 
+   45  touch JSTLWebApp/.reload
+   46  vi src/AuthenticationServlet.java
+   47  javac -d JSTLWebApp/WEB-INF/classes/ src/AuthenticationServlet.java 
+   48  vi src/AuthenticationServlet.java
+   49  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   50  vi src/AuthenticationServlet.java
+   51  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   52  touch JSTLWebApp/.reload
+   53  vi src/AuthenticationServlet.java
+   54  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   55  touch JSTLWebApp/.reload
+   56  vi JSTLWebApp/customer.jspx 
+   57  mkdir JSTLWebApp/protected
+   58  cp JSTLWebApp/customer.jspx JSTLWebApp/protected/order.jspx
+   59  vi JSTLWebApp/protected/order.jspx
+   60  vi src/CustomerBean.java 
+   61  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   62  touch JSTLWebApp/.reload
+   63  vi JSTLWebApp/protected/order.jspx
+   64  vi src/CustomerBean.java 
+   65  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   66  touch JSTLWebApp/.reload
+   67  cp JSTLWebApp/products.jspx JSTLWebApp/protected/invoice.jspx
+   68  vi JSTLWebApp/protected/invoice.jspx
+   69  vi src/AuthenticationServlet.java 
+   70  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   71  touch JSTLWebApp/.reload
+   72  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   73  vi src/AuthenticationServlet.java 
+   74  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   75  touch JSTLWebApp/.reload
+   76  vi src/AuthorizationFilter.java
+   77  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   78  vi src/AuthorizationFilter.java
+   79  javac -d JSTLWebApp/WEB-INF/classes/ src/*.java
+   80  touch JSTLWebApp/.reload
+   81  history > cmd-19-10-2020.txt
