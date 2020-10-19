@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:b="http://java.met.edu/basic">
+	
+	<head>
+		<title>JSPWebApp</title>
+	</head>
+	<body>
+		<h1>Welcome Gambler</h1>
+		<b>WINNER: </b>
+		<b:lotto var="digit" digits="9">
+			<i>${digit}</i>
+		</b:lotto>
+	</body>
+</html>
+
