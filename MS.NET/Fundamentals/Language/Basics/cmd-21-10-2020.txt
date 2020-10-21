@@ -1,0 +1,29 @@
+cd MS.NET\Fundamentals\Language\Basics
+md MS.NET\Fundamentals\Language\Basics
+cd MS.NET\Fundamentals\Language\Basics
+notepad hello1.il
+ilasm hello1.il
+dir
+hello1.exe
+ilasm hello1.il
+dir
+hello1
+ilasm hello1.il
+hello1
+ilasm hello1.il
+hello1
+ilasm hello1.il
+hello1.exe
+ilasm hello1.il
+hello1.exe
+ilasm hello1.il
+hello1.exe
+np
+notepad hello2.cs
+cls
+csc hello2.cs
+dir
+hello2
+csc hello2.cs
+ildasm hello2.exe
+
