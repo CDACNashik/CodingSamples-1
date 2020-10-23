@@ -1,0 +1,50 @@
+csc objclasstest.cs Interval.cs
+objclasstest.exe
+np banking.cs
+csc banking.cs
+csc banking.cs -t:library
+dir
+csc banking.cs -t:library
+np abstractclasstest.cs
+csc abstractclasstest.cs -r:banking.dll
+abstractclasstest.exe
+csc abstractclasstest.cs -r:banking.dll
+abstractclasstest.exe
+abstractclasstest.exe abcd
+abstractclasstest.exe 3000
+abstractclasstest.exe 18000
+csc -langversion:?
+doskey /h > cmd-23-10-2020.txt
+baseclasstest1.exe
+csc payroll.cs -target:library
+baseclasstest1.exe
+csc payroll.cs -target:library
+baseclasstest1.exe
+csc payroll.cs -target:library
+ildasm payroll.dll
+np baseclasstest2.cs
+csc baseclasstest2.cs -r:payroll.dll
+baseclasstest2.exe
+csc baseclasstest2.cs -r:payroll.dll
+baseclasstest2.exe
+csc baseclasstest2.cs -r:payroll.dll
+baseclasstest2.exe
+csc baseclasstest2.cs -r:payroll.dll
+baseclasstest2.exe
+csc baseclasstest2.cs -r:payroll.dll
+baseclasstest2.exe
+cp ..\Basics\interval.cs
+copy ..\Basics\interval.cs
+dir
+np Interval.cs
+np objclasstest.cs
+csc objclasstest.cs Interval.cs
+objclasstest.exe
+csc objclasstest.cs Interval.cs
+objclasstest.exe
+csc objclasstest.cs Interval.cs
+objclasstest.exe
+csc objclasstest.cs Interval.cs
+objclasstest.exe
+csc objclasstest.cs Interval.cs
+cls

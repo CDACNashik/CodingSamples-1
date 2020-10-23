@@ -1,5 +1,15 @@
 using System;
 
+partial class Interval
+{
+	public static bool operator==(Interval x, Interval y)
+	{
+		return x.GetHashCode() == y.GetHashCode() && x.Equals(y);
+	}
+
+	public static bool operator!=(Interval x, Interval y) => !(x == y);
+}
+
 static class Program
 {
 	public static void Main()
@@ -18,6 +28,9 @@ static class Program
 		Console.WriteLine("a is identical to c: {0}", ReferenceEquals(a, c));
 		Console.WriteLine("d is identical to b: {0}", ReferenceEquals(d, b));
 
+		Console.WriteLine("a is equal to b: {0}", a == b);
+		Console.WriteLine("a is equal to c: {0}", a == c);
+		Console.WriteLine("d is equal to b: {0}", d == b);
 
 	}
 }
