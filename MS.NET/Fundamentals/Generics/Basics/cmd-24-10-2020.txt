@@ -1,0 +1,43 @@
+cls
+dir *.cs
+np delegatetest.cs
+csc delegatetest.cs
+ildasm delegatetest.exe
+csc delegatetest.cs
+delegatetest.exe 10
+csc delegatetest.cs
+delegatetest.exe 10
+delegatetest.exe 20
+csc delegatetest.cs
+delegatetest.exe 10
+ildasm delegatetest.exe
+np delegatetest.cs
+e:
+subst /d s:
+cd MS.NET\Fundamentals
+dir
+md Generics\Basics
+cd Generics\Basics
+dir
+np autoboxtest.cs
+subst s: ..
+s:
+cd Basics
+csc autoboxtest.cs
+ildasm autoboxtest.exe
+csc autoboxtest.cs
+ildasm autoboxtest.exe
+csc autoboxtest.cs
+ildasm autoboxtest.exe
+np boxing.il
+ren boxing.il boxunbox.il
+cls
+np boxunbox.il
+csc autoboxtest.cs
+autoboxtest.exe 17
+autoboxtest.exe 36
+ildasm autoboxtest.exe
+csc autoboxtest.cs
+autoboxtest.exe 17
+autoboxtest.exe 36
+
