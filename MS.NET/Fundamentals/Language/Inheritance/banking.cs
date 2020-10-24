@@ -26,6 +26,11 @@ namespace Banking
 		}
 	}
 
+	public interface IProfitable
+	{
+		double GetInterest(int months);
+	}
+
 	//non-inheritable class
 	sealed class CurrentAccount : Account
 	{
@@ -42,7 +47,7 @@ namespace Banking
 		}
 	}
 
-	sealed class SavingsAccount : Account
+	sealed class SavingsAccount : Account, IProfitable
 	{
 		const double MinBal = 5000;
 
@@ -61,6 +66,12 @@ namespace Banking
 			if(Balance - amount < MinBal)
 				throw new InsufficientFundsException();
 			Balance -= amount;
+		}
+
+		public double GetInterest(int months)
+		{
+			float rate = Balance < 3 * MinBal ? 4 : 5;
+			return Balance * months * rate / 1200;
 		}
 	}
 

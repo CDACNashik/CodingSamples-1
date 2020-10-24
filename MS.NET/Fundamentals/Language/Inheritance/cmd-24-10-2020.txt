@@ -1,0 +1,30 @@
+s:
+dir
+cd Inheritance
+np banking.cs
+csc banking.cs -t:library
+np interfacetest1.cs
+csc interfacetest1.cs -r:banking.dll
+interfacetest1.exe
+csc interfacetest1.cs -r:banking.dll
+interfacetest1.exe
+np interfacetest2.cs
+csc interfacetest2.cs
+interfacetest2.exe
+csc interfacetest2.cs
+interfacetest2.exe
+interfacetest2.exe 2
+interfacetest2.exe three
+csc interfacetest2.cs
+interfacetest2.exe
+interfacetest2.exe 2
+interfacetest2.exe three
+interfacetest2.exe 5
+csc interfacetest2.cs
+ildasm interfacetest1.exe
+ildasm interfacetest2.exe
+cscc interfacetest2.cs
+dotnet interfacetest2.dll
+dotnet interfacetest2.dll 2
+ildasm interfacetest2.dll
+
