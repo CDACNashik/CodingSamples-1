@@ -1,0 +1,50 @@
+variancetest.exe
+csc variancetest.cs Interval.cs
+variancetest.exe
+csc variancetest.cs Interval.cs
+variancetest.exe
+csc variancetest.cs Interval.cs
+variancetest.exe
+csc variancetest.cs Interval.cs
+variancetest.exe
+
+copy autoboxtest.cs genmethodtest.cs
+np genmethodtest.cs
+csc genmethodtest.cs
+genmethodtest.exe 23
+genmethodtest.exe 32
+ildasm genmethodtest.exe
+copy genmethodtest.cs constrainttest.cs
+np constrainttest.cs
+csc constrainttest.cs
+ildasm c:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll
+csc constrainttest.cs
+constrainttest.exe
+csc constrainttest.cs
+constrainttest.exe
+copy E:\MS.NET\Fundamentals\Language\Inheritance\Interval.cs
+csc constrainttest.cs
+csc constrainttest.cs Interval.cs
+np Interval.cs
+csc constrainttest.cs Interval.cs
+constrainttest.exe
+np gentypetest.cs
+csc gentypetest.cs
+gentypetest.exe
+csc gentypetest.cs
+constrainttest.exe
+gentypetest.exe
+csc gentypetest.cs
+gentypetest.exe
+csc gentypetest.cs
+gentypetest.exe
+csc gentypetest.cs
+gentypetest.exe
+csc gentypetest.cs
+gentypetest.exe
+np gentypetest.cs variancetest.cs
+copy gentypetest.cs variancetest.cs
+np variancetest.cs
+csc variancetest.cs Interval.cs
+variancetest.exe
+csc variancetest.cs Interval.cs
