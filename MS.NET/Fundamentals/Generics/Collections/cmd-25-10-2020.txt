@@ -1,0 +1,49 @@
+copy dictionarytest1.cs dictionarytest3.cs
+np dictionarytest3.cs
+csc dictionarytest3.cs Interval.cs
+dictionarytest3.exe friday
+dictionarytest3.exe sunday
+dictionarytest3.exe 
+ildasm c:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll
+csc iterationtest.cs
+iterationtest.exe
+csc iterationtest.cs
+iterationtest.exe
+np iterationtest.cs
+cd ..
+md Collections
+cd Collections
+copy ..\Basics\Interval.cs
+np listtest1.cs
+csc listtest1.cs Interval.cs
+ren listtest1.cs listtest.cs
+del listtest1.exe
+csc listtest.cs Interval.cs
+listtest.exe
+copy listtest.cs settest1.cs
+np settest1.cs
+csc settest1.cs
+csc settest1.cs Interval.cs
+settest1.exe
+copy settest1.cs settest2.cs
+np settest2.cs
+csc settest2.cs
+csc settest2.cs Interval.cs
+settest2.exe
+csc settest2.cs Interval.cs
+settest2.exe
+copy settest1.cs dictionarytest1.cs
+np dictionarytest1.cs
+csc dictionarytest1.cs Interval.cs
+dictionarytest1.exe 
+csc dictionarytest1.cs Interval.cs
+dictionarytest1.exe tuesday
+dictionarytest1.exe friday
+dictionarytest1.exe sunday
+dictionarytest1.exe
+copy dictionarytest1.cs dictionarytest2.cs
+np dictionarytest2.cs
+csc dictionarytest2.cs Interval.cs
+dictionarytest2.exe tuesday
+dictionarytest2.exe sunday
+dictionarytest2.exe
