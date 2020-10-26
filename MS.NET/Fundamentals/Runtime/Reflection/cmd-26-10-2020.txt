@@ -1,0 +1,48 @@
+np bank.cs
+csc bank.cs -t:library
+dir
+np earlybindtest.cs
+csc bank.cs -t:library
+csc earlybindtest.cs -r:bank.dll
+earlybindtest.exe 500000 HomeLoan
+earlybindtest.exe 500000 
+earlybindtest.exe 500000 PersonalLoan
+earlybindtest.exe 500000 CarLoan
+earlybindtest.exe 500000 BusinessLoan
+copy earlybindtest.cs latebindtest.cs
+np latebindtest.cs
+csc latebindtest.cs
+latebindtest.exe 500000 CarLoan GetInterestRate
+latebindtest.exe 500000 HomeLoan GetInterestRateForWomen
+latebindtest.exe 500000 HomeLoan GetInterestRate
+latebindtest.exe 500000 PersonalLoan GetInterestRate
+latebindtest.exe 500000 PersonalLoan GetInterestRateForEmployees
+cd ..
+e:
+subst /d s:
+cd ..
+mkdir Runtime
+subst s: .
+subst /d s:
+cd Runtime
+subst /d s:
+subst s: .
+s:
+md Reflection
+cd Reflection
+copy E:\MS.NET\Fundamentals\Language\Inheritance\Interval.cs
+copy E:\MS.NET\Fundamentals\Language\Inheritance\payroll.dll
+np objaccesstest.cs
+csc objaccesstest.cs Interval.cs -r:payroll.dll
+objaccesstest.exe
+csc objaccesstest.cs Interval.cs -r:payroll.dll
+objaccesstest.exe
+csc objaccesstest.cs Interval.cs -r:payroll.dll
+objaccesstest.exe
+np Interval.cs
+csc objaccesstest.cs Interval.cs -r:payroll.dll
+objaccesstest.exe
+csc objaccesstest.cs Interval.cs -r:payroll.dll
+objaccesstest.exe
+np finance.cs
+ren finance.cs bank.cs
