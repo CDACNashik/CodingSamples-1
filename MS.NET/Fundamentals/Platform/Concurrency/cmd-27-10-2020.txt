@@ -1,0 +1,49 @@
+S:
+cd MS.NET\Fundamentals\Runtime
+subst S: .
+S:
+cls
+cd Interop
+cls
+dir *.cs
+tlbimp legacy\bin\quadeq.exe
+tlbimp
+tlbimp /machine:x86 legacy\bin\quadeq.exe
+tlbimp /machine:x64 legacy\bin\quadeq.exe
+dir
+ildasm QuadEq.dll
+np rcwtest.cs
+ildasm QuadEq.dll
+ildasm e:\MS.NET\Fundamentals\Language\Inheritance\payroll.dll
+ildasm QuadEq.dll\
+ildasm QuadEq.dll
+csc rcwtest.cs -r:QuadEq.dll
+rcwtest.exe 42 108
+rcwtest.exe 28 100
+tlbimp /machine:x64 legacy\bin\finance.dll
+ildasm FinanceLib.dll
+np ccwtest.cs
+ildasm FinanceLib.dll
+csc ccwtest.cs 
+csc ccwtest.cs -link:FinanceLib.dll
+ccwtest.exe 500000 12
+csc ccwtest.cs -link:FinanceLib.dll
+ccwtest.exe 500000 12
+csc ccwtest.cs -link:FinanceLib.dll
+ccwtest.exe 500000 12
+ccwtest.exe 500 12
+ccwtest.exe 500000 120
+ildasm ccwtest.exe
+csc ccwtest.cs -link:FinanceLib.dll
+ccwtest.exe 500000 12
+cd ..
+e:
+subst /d s:
+cd ..
+mkdir Platform
+cd Platform
+subst s: .
+s:
+md Concurrency
+cd Concurrency
+
