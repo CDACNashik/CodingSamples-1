@@ -1,0 +1,45 @@
+dir *.cs
+np bank.cs
+csc bank.cs -t:library
+copy earlybindtest.cs custattribtest.cs
+np custattribtest.cs
+csc custattribtest.cs -r:bank.dll
+custattribtest.exe 500000
+custattribtest.exe 500000 HomeLoan
+custattribtest.exe 500000 BusinessLoan
+csc custattribtest.cs -r:bank.dll
+custattribtest.exe 500000
+custattribtest.exe 500000 HomeLoan
+csc custattribtest.cs -r:bank.dll
+csc bank.cs -t:library
+csc custattribtest.cs -r:bank.dll
+custattribtest.exe 500000
+custattribtest.exe 500000 HomeLoan
+custattribtest.exe 500000 BusinessLoan
+custattribtest.exe 500000 CarLoan
+np dynamicobjtest.cs
+csc dynamicobjtest.cs
+dynamicobjtest.exe FormalGreeter
+dynamicobjtest.exe CasualGreeter
+dynamicobjtest.exe SillyGreeter
+csc dynamicobjtest.cs
+dynamicobjtest.exe FormalGreeter
+csc dynamicobjtest.cs
+dynamicobjtest.exe FormalGreeter
+csc dynamicobjtest.cs
+dynamicobjtest.exe FormalGreeter
+dynamicobjtest.exe CasualGreeter
+csc dynamicobjtest.cs
+dynamicobjtest.exe FormalGreeter
+dynamicobjtest.exe CasualGreeter
+csc dynamicobjtest.cs
+dynamicobjtest.exe FormalGreeter
+dynamicobjtest.exe CasualGreeter
+cd ..
+md Interop
+cd Interop
+np unsafeptrtest.cs
+csc unsafeptrtest.cs
+csc unsafeptrtest.cs -unsafe
+unsafeptrtest.exe
+

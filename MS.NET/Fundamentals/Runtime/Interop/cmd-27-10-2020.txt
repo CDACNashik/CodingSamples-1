@@ -1,0 +1,28 @@
+cd MS.NET\Fundamentals\Runtime
+dir
+subst S: .
+S:
+cls
+dir
+cd Interop
+dir
+legacy\bin\setup.bat
+dumpbin /exports legacy\bin\asset32.dll
+np pinvoketest1.cs
+dumpbin /headers legacy\bin\asset32.dll
+dumpbin /headers legacy\bin\invest.dll
+csc pinvoketest1.cs
+pinvoketest1.exe 12000 5
+dumpbin /headers pinvoketest1.exe
+csc /platform:x86 pinvoketest1.cs
+pinvoketest1.exe 12000 5
+pinvoketest1.exe 12000 5 ddb
+pinvoketest1.exe 12000 5 syd
+copy pinvoketest1.cs pinvoketest2.cs
+np pinvoketest2.cs
+csc pinvoketest2.cs
+pinvoketest2.exe 75000 4
+csc pinvoketest2.cs
+pinvoketest2.exe 75000 4
+regedit
+
