@@ -1,0 +1,44 @@
+S:
+cls
+dir
+cd Concurrency
+cls
+dir
+np worker.cs
+np threadtest.cs
+csc threadtest.cs worker.cs
+threadtest.exe
+threadtest.exe 70
+csc threadtest.cs worker.cs
+threadtest.exe
+csc threadtest.cs worker.cs
+threadtest.exe
+threadtest.exe 70
+csc threadtest.cs worker.cs
+threadtest.exe 70
+threadtest.exe 80
+np threadsynctest.cs
+csc threadsynctest.cs worker.cs
+threadsynctest.exe
+csc threadsynctest.cs worker.cs
+threadsynctest.exe
+csc threadsynctest.cs worker.cs
+threadsynctest.exe
+csc threadsynctest.cs worker.cs
+threadsynctest.exe
+csc threadsynctest.cs worker.cs
+threadsynctest.exe
+np threadcoordtest.cs
+csc threadcoordtest.cs worker.cs
+threadcoordtest.exe
+csc threadcoordtest.cs worker.cs
+threadcoordtest.exe
+csc threadcoordtest.cs worker.cs
+threadcoordtest.exe
+csc threadcoordtest.cs worker.cs
+threadcoordtest.exe
+csc threadcoordtest.cs worker.cs
+threadcoordtest.exe
+csc threadcoordtest.cs worker.cs
+threadcoordtest.exe
+
