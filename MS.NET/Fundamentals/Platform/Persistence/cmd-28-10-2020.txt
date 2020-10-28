@@ -1,0 +1,50 @@
+np readerwritertest1.cs
+csc readerwritertest1.cs
+readerwritertest1.exe hdd 4999.95 20000
+readerwritertest1.exe
+dir
+np product.dat
+copy readerwritertest1.cs readerwritertest2.cs
+np readerwritertest2.cs
+csc readerwritertest2.cs
+readerwritertest2.exe hdd 4999.95 20000
+readerwritertest2.exe 
+np product.txt
+dir product.*
+np memmapfiletest.cs
+cls
+doskey /h > cmd-28-10-2020.txt
+asyncawaittest.exe
+csc asyncawaittest.cs worker.cs
+asyncawaittest.exe
+np parallellinqtest.cs
+csc parallellinqtest.cs worker.cs
+parallellinqtest.exe
+csc parallellinqtest.cs worker.cs
+parallellinqtest.exe
+copy parallellinqtest.exe z:\Shared
+e:
+subst /d s:
+cd MS.NET\Fundamentals\Platform
+subst s: .
+s:
+cd ..
+md Persistence
+cd Persistence
+np filestreamtest.cs
+csc filestreamtest.cs
+copy filestreamtest.cs data1.txt
+filestreamtest.exe data1.txt data2.txt
+np data1.txt
+np data2.txt
+filestreamtest.exe data1.txt data2.txt
+filestreamtest.exe data2.txt data3.txt
+np data3.txt
+np memmapfiletest.cs
+dir
+csc memmapfiletest.cs
+np data1.txt
+memmapfiletest.exe data1.txt
+np data1.txt
+memmapfiletest.exe data1.txt
+np data1.txt
