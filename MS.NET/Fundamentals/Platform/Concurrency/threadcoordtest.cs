@@ -9,9 +9,10 @@ static class Program
 	private static void Produce()
 	{
 		Console.WriteLine("Producer<{0}> ready...", Thread.CurrentThread.ManagedThreadId);
+		int result = Worker.DoWork();
 		lock(coordinator)
 		{
-			data = Worker.DoWork();
+			data = result;
 			Monitor.Pulse(coordinator);	
 		}
 	}
@@ -29,10 +30,11 @@ static class Program
 
 	public static void Main()
 	{
+		var producer = new Thread(Produce);
+		producer.Start();
+
 		var consumer = new Thread(Consume);
 		consumer.Start();
 
-		var producer = new Thread(Produce);
-		producer.Start();
 	}
 }
