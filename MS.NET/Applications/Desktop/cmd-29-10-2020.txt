@@ -1,0 +1,49 @@
+csc eventtest.cs
+eventtest.exe
+csc eventtest.cs
+eventtest.exe
+cls
+cd Persistence
+cls
+dir
+cls
+dir *.cs
+dir
+np bfserhr.cs
+csc bfserhr.cs -t:library
+np objsertest.cs
+ren objsertest.cs objsertest1.cs
+csc objsertest1.cs -r:bfserhr.dll
+objsertest1.exe Accounting
+objsertest1.exe
+dir
+np dept.dat
+csc bfserhr.cs -t:library
+objsertest1.exe Accounting
+dir
+np dept.dat
+copy bfserhr.cs xmlserhr.cs
+np xmlserhr.cs
+csc xmlserhr.cs -t:library
+copy objsertest1.cs objsertest2.cs
+np objsertest2.cs
+csc objsertest2.cs -r:xmlserhr.dll
+objsertest2.exe Accounting
+objsertest2.exe
+dir
+np dept.xml
+csc xmlserhr.cs -t:library
+objsertest2.exe Accounting
+objsertest2.exe
+dir
+np dept.xml
+e:
+subst /d s:
+cd ..\..
+md Applications\Desktop
+cd Applications\Desktop
+cd ..
+subst s: .
+s:
+cd Desktop
+np eventtest.cs
