@@ -3,16 +3,14 @@ eventtest.exe
 csc eventtest.cs
 eventtest.exe
 cls
-cd Persistence
-cls
-dir
-cls
 dir *.cs
-dir
-np bfserhr.cs
-csc bfserhr.cs -t:library
-np objsertest.cs
-ren objsertest.cs objsertest1.cs
+np winctrltest.cs
+csc winctrltest.cs
+winctrltest.exe
+csc winctrltest.cs -t:winexe
+copy winctrltest.cs winpainttest.cs
+np winpainttest.cs
+csc winpainttest.cs -t:winexe
 csc objsertest1.cs -r:bfserhr.dll
 objsertest1.exe Accounting
 objsertest1.exe

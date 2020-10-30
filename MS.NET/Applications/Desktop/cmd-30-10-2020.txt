@@ -1,0 +1,5 @@
+np wpfdepobjtest.cs
+csc wpfdepobjtest.cs
+csc  wpfdepobjtest.cs @wpf.rsp
+np wpf.rsp
+csc  wpfdepobjtest.cs @wpf.rsp
