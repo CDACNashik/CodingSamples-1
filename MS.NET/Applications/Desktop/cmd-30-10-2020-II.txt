@@ -1,0 +1,6 @@
+dir
+wpfdepobjtest.cs wpfuielemtest.cs
+copy wpfdepobjtest.cs wpfuielemtest.cs
+np wpfuielemtest.cs
+csc wpfuielemtest.cs @wpf.rsp
+
