@@ -1,1 +1,32 @@
-
+s:
+subst s:
+subst s: .
+s:
+md Distributed
+cd Distributed
+np tcplistenertest.cs
+csc tcplistenertest.cs
+start tcplistenertest.exe
+tcplistenertest.exe
+netstat /noa
+telnet localhost 4055
+copy tcplistenertest.exe z:\Shared\
+telnet localhost 4055
+csc tcplistenertest.cs
+start tcplistenertest.exe
+telnet localhost 4055
+csc tcplistenertest.cs
+start tcplistenertest.exe
+telnet localhost 4055
+np tcpclienttest.cs
+csc tcpclienttest.cs
+tcpclienttest.exe orange 12
+tcpclienttest.exe cpu 4
+tcpclienttest.exe hdd 2000
+np udpclienttest1.cs
+csc udpclienttest1.cs
+start udpclienttest1.exe
+copy udpclienttest1.cs udpclienttest2.cs
+np udpclienttest2.cs
+csc udpclienttest2.cs
+udpclienttest2.exe
