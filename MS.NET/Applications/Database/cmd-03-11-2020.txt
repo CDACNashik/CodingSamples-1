@@ -1,0 +1,35 @@
+s:
+cd Database
+np querytest.cs
+notepad querytest.cs
+csc querytest.cs
+np querytest.exe.config
+notepad querytest.exe.config
+querytest.exe SqlShopDB
+querytest.exe AccessShopDB
+querytest.exe SqlShopDB
+np updatetest.ca\s
+np updatetest.cs
+doskey np=notepad $*
+np updatetest.cs
+csc updatetest.cs
+querytest.exe SqlShopDB
+updatetest.exe 104
+csc updatetest.cs
+querytest.exe SqlShopDB
+updatetest.exe 104
+querytest.exe SqlShopDB
+updatetest.exe 108
+copy updatetest.cs paramsqltest.cs
+np paramsqltest.cs
+csc paramsqltest.cs
+paramsqltest.exe CU102 104 6
+paramsqltest.exe CU103 106 9
+paramsqltest.exe CU103 101 9
+copy paramsqltest.cs storedproctest.cs
+np storedproctest.cs
+csc storedproctest.cs
+storedproctest.exe CU104 105 4
+storedproctest.exe CU107 102 7
+storedproctest.exe CU101 102 7
+
