@@ -1,0 +1,17 @@
+sqlcmd -d Shop
+cd MS.NET\Applications
+subst s: .
+s:
+md Web
+cd Web
+np httplistenertest.cs
+notepad httplistenertest.cs
+csc httplistenertest.cs
+start httplistenertest.exe
+np webclienttest.cs
+notepad webclienttest.cs
+csc webclienttest.cs
+webclienttest.exe motherboard 3
+webclienttest.exe orange 6
+webclienttest.exe keyboard 500
+
