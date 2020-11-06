@@ -1,1 +1,50 @@
+﻿@model IEnumerable<ServerApp.Models.Product>
+@{
+    Layout = null;
+}
 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ServerApp</title>
+</head>
+<body>
+    <h1>List of Products</h1>
+    <table border="1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Stock)
+            </th>
+            <th>
+                Links
+            </th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(e => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(e => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(e => item.Stock)
+                </td>
+                <td>
+                    @Html.ActionLink("Orders", "Details", new { id = item.Id })
+                    @Html.ActionLink("Update", "Edit", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
